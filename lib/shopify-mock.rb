@@ -1,4 +1,4 @@
-require 'fakeweb'
+require 'webmock'
 require 'xml'
 
 require 'shopify-mock/errors'
@@ -67,7 +67,12 @@ module ShopifyAPI
       def allow_internet=(state = true)
         return @allow_internet if @allow_internet == state
         @allow_internet = state
-        FakeWeb.allow_net_connect = @allow_internet
+        
+        if @allow_internet
+          WebMock.allow_net_connect!
+        else
+          WebMock.disable_net_connect!
+        end
       end
       
       # registers all the fixed responses

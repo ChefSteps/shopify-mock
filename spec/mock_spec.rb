@@ -49,14 +49,14 @@ describe ShopifyAPI::Mock do
     context "given true" do
       before { ShopifyAPI::Mock.allow_internet = true }
       it "should allow Internet access" do
-        FakeWeb.allow_net_connect?.should eq true
+        WebMock.allow_net_connect?.should eq true
       end
     end
     
     context "given false" do
       before { ShopifyAPI::Mock.allow_internet = false }
       it "should not allow Internet access" do
-        FakeWeb.allow_net_connect?.should eq false
+        WebMock.allow_net_connect?.should eq false
       end
     end
   end

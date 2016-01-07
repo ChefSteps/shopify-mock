@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Travis Haynes"]
   s.email       = ["travis.j.haynes@gmail.com"]
   s.homepage    = "https://github.com/travishaynes/shopify-mock"
-  s.summary     = %q{Serves Shopify resources via FakeWeb for easily testing Shopify apps.}
+  s.summary     = %q{Serves Shopify resources via WebMock for easily testing Shopify apps.}
   s.description = %q{This gem is used for testing Shopify apps without having to actually connect to
 Shopify to develop the application.
 
@@ -22,7 +22,7 @@ browser, or in the console.}
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   
-  s.add_dependency("fakeweb", [">= 1.3.0"])
+  s.add_dependency("webmock", [">= 1.7.0"])
   s.add_dependency("rspec", [">= 2.6.0"])
   s.add_dependency("rake", [">= 0.8.7"])
   s.add_dependency("shopify_api", [">= 1.2.5"])

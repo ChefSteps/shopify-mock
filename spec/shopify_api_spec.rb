@@ -25,7 +25,7 @@ describe "ShopifyAPI objects" do
   
   # test collections
   [ :blog, :comment, :country, :custom_collection, :customer_group,
-    :customer, :order, :page, :product_search_engine, :product, :redirect,
+    :customer, :order, :page, :product, :redirect, # :product_search_engine, 
     :script_tag, :smart_collection, :theme, :webhook
   ].each do |o|
     
